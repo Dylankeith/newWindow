@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+p {display: none;}
+</style>
+
+</head>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<script>
+var x = 0;
+function myclick() {
+   //var x = 4;
+   //alert("in click function, x =  " + x);
+   //document.getElementById("demo").innerHTML = "Hello, how are you?"
+   x = x + 1;
+   document.getElementById("demo").style.display = "block";  
+   document.getElementById("demo").innerHTML = "Click #" + x; 
+
+   var newWindow = window.open("", null);
+   
+   newWindow.document.write("<style>\n");
+   newWindow.document.write("h1 {");
+   newWindow.document.write("  background-color:lightgray;");
+   newWindow.document.write("}");
+   newWindow.document.write("</style>\n");
+
+   
+   newWindow.document.write("<h1> This is a new page </h1>");
+   newWindow.document.write("<table border = '1'  style='background-color:lightblue'  >");
+
+   newWindow.document.write("<tr>");
+   newWindow.document.write("<td>A</td> <td> B </td>");
+   newWindow.document.write("</tr>");
+   
+   newWindow.document.write("<tr class = 'evenrow'>");
+   newWindow.document.write("<td>C</td> <td> D </td>");
+   newWindow.document.write("</tr>");
+   
+   newWindow.document.write("</table>");
+   
+}
+
+</script>
+
+<button type="button" onclick="myclick()">
+Click me to display Date and Time.</button>
+
+<p id="demo"> There is text here </p>
+
+</body>
+</html> 
